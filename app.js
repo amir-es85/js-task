@@ -12,3 +12,12 @@ function takht(number) {
 
 }
 console.log (takht(amir2))
+
+//task3
+const amir3 = [
+  9 ,200 ,15 ,1270,3 ,35,17
+]
+function tidy (num2){
+return num2.sort((a , b) => (a - b))
+}
+console.log(tidy(amir3))
