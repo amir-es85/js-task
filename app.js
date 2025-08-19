@@ -78,3 +78,46 @@ function convertTo12hr(time24){
  return hours + ":" + minuteStr + " " + period
 }
 console.log(convertTo12hr("12:6"))
+
+//task 8
+
+let b = 12
+if(b > 1 && b < 10){
+  console.log("true")
+}
+else{
+  console.log("false")
+}
+// task 9
+function calculateBMI (height , weight){
+  if(!Number.isFinite (weight) || !Number.isFinite(height)){
+    return "وزن و قد باید معتبر باشد"
+  }
+  if(weight <= 0 || height <= 0){
+    return 'قد و وزن باید بزرگتر از صفر باشد'
+  }
+  let bmi = weight / (height **2)
+  let bmiRounded = Math.round(bmi *100) / 100
+  
+  let category;
+  if (bmi < 18.5) {
+    category = "کم‌وزن";
+  } else if (bmi < 25) {
+    category = "وزن نرمال";
+  } else if (bmi < 30) {
+    category = "اضافه‌وزن";
+  } else {
+    category = "چاقی";
+  }
+
+  return `BMI: ${bmiRounded} → ${category}`
+
+}
+console.log(calculateBMI(1.70 , 70))
+
+//task 10
+function containsVowel (str){
+  const vowels = "aeiouAEIOU"
+  return vowels.split('').some(vowel => str.includes(vowel))
+}
+console.log(containsVowel("sky"))
